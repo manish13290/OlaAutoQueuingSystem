@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="adminapp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Driver App</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+        <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+        <script src="js/driverApp.js"></script>
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body ng-controller="AdminAppCtrl">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-md-offset-0">
+                    <button type="button" class="btn btn-default btn-sm" ng-click="refresh();">Refresh</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"><h3>Request Id</h3></div>
+                <div class="col-sm-3"><h3>Customer Id</h3></div>
+                <div class="col-sm-3"><h3>Time Elapsed</h3></div>
+                <div class="col-sm-2"><h3>Status</h3></div>
+                <div class="col-sm-1"><h3>Driver</h3></div>
+            </div>
+            <div class="row" ng-repeat="ride in rideList">
+                <div class="col-sm-3"><h3>{{ride.id}}</h3></div>
+                <div class="col-sm-3"><h3>{{ride.customerId}}</h3></div>
+                <div class="col-sm-3"><h3>Time Elapsed</h3></div>
+                <div class="col-sm-2"><h3>{{ride.status}}</h3></div>
+                <div class="col-sm-1"><h3>{{ride.driverId}}</h3></div>
+            </div>
+        </div>
+    </body>
+
+</html>
